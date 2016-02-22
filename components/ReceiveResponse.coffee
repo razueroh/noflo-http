@@ -25,8 +25,8 @@ exports.getComponent = ->
   , (data, groups, out) ->
     data.on 'response', (res) ->
       str = ''
-      res.on 'data', (msg) ->
-        str = str + msg
+      res.on 'data', (chunk) ->
+        str = str + chunk
       res.on 'end', ->
         out.message.send str
         out.response.send res
