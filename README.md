@@ -21,6 +21,16 @@ OutPort | url | `object` | Object with request properties
 
 You can use [noflo-objects](https://www.npmjs.com/package/noflo-objects) to add more properties to the `url` object.
 
+### ReceiveResponse
+
+On response event
+
+Port | Name | Datatype | Description
+-----|------|----------|-------------
+InPort | request | `object` | Object with request parameters
+OutPort | response | `string` | Raw data received from the server
+OutPort | message | `string` | Payload of the data received from the server
+
 ### SendRequest
 
 Send request
