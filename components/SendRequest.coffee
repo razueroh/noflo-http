@@ -28,7 +28,7 @@ exports.getComponent = ->
     req = http.request url
 
     req.end ->
-        c.outPorts.request.send req
+      c.outPorts.request.send req
 
   # Finally return the component instance
   c
