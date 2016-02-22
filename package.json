@@ -41,6 +41,7 @@
   ],
   "noflo": {
     "components": {
+      "ConfigRequest": "components/ConfigRequest.coffee",
       "ReceiveResponse": "components/ReceiveResponse.coffee",
       "SendRequest": "components/SendRequest.coffee"
     }
