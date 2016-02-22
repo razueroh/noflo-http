@@ -15,7 +15,7 @@ Create an object with a few request properties
 
 Port | Name | Datatype | Description
 -----|------|----------|-------------
-InPort | href | `string` | String specifying the URL for the request. It should be of the form `'<protocol>://<hostname>:<port>/<path>?<query>'`. Supports `http` and `https` protocols
+InPort | href | `string` | String specifying the URL for the request. It should be of the form `'<protocol>://<hostname>:<port>/<path>?<query>'`. It supports `http` and `https` protocols
 InPort | method | `string` | String specifying the request method. Defaults to `'GET'`
 OutPort | url | `object` | Object with request properties
 
