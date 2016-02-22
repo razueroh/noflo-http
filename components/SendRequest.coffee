@@ -1,5 +1,5 @@
 noflo = require 'noflo'
-http = require 'http'
+url = require 'url'
 
 # @runtime noflo-nodejs
 
@@ -8,8 +8,9 @@ exports.getComponent = ->
   c.icon = 'cog'
   c.description = 'Send request'
 
-  url = null
+  options = null
   req = null
+  http = null
   # Add input ports
   c.inPorts.add 'url',
     datatype: 'all'
@@ -23,9 +24,18 @@ exports.getComponent = ->
     datatype: 'object'
 
   c.inPorts.url.on 'data', (payload) ->
-    url = payload
+    options = payload
+    if typeof options is 'string'
+      options = url.parse(options)
+
+    protocol = options.protocol
+
+    switch protocol
+      when 'http:' then http = require('http')
+      when 'https:' then http = require('https')
+
   c.inPorts.start.on 'data', ->
-    req = http.request url
+    req = http.request options
 
     req.end ->
       c.outPorts.request.send req
