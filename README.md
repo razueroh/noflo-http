@@ -41,3 +41,9 @@ InPort | url | `all` | `object` or `string`. If it is an `object`, this should h
 InPort | data | `bang` | Data to write in body of the request
 InPort | start | `bang` | Signal to send the request
 OutPort | request | `object` | Object with request parameters
+
+## Examples
+
+Name | Gist | Flowhub
+-----|------|--------
+HTTP GET Client | [code](https://gist.github.com/razueroh/4a1c979dcc6c4716ac32) | [example](https://app.flowhub.io/#example/4a1c979dcc6c4716ac32)
