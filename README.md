@@ -38,5 +38,6 @@ Send request
 Port | Name | Datatype | Description
 -----|------|----------|-------------
 InPort | url | `all` | `object` or `string`. If it is an `object`, this should have the properties described [here](https://nodejs.org/api/http.html#http_http_request_options_callback). (You can use the ConfigRequest component to build an `url` object with a few basic properties). If it is a `string`, this should be of the form `'<protocol>://<hostname>:<port>/<path>?<query>'`. Supports `http` and `https` protocols
+InPort | data | `bang` | Data to write in body of the request
 InPort | start | `bang` | Signal to send the request
 OutPort | request | `object` | Object with request parameters
