@@ -37,7 +37,10 @@
   },
   "keywords": [
     "noflo",
-    "ecosystem:noflo"
+    "http",
+    "client",
+    "iot",
+    "internet of things"
   ],
   "noflo": {
     "components": {
