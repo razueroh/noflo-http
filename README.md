@@ -21,6 +21,16 @@ OutPort | url | `object` | Object with request properties
 
 You can use [noflo-objects](https://www.npmjs.com/package/noflo-objects) to add more properties to the `url` object.
 
+### Headers
+
+Add Headers to the URL object
+
+Port | Name | Datatype | Description
+-----|------|----------|-------------
+InPort | url | `object` | Object with request properties
+InPort | headers | `string` | String specifying the request headers. It should be of the form `'{"<field_name>":"<value>" [, ...]}'` Defaults to `'{}'`
+OutPort | out | `object` | Object with request properties and headers
+
 ### ReceiveResponse
 
 On response event
